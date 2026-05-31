@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Mukta", ui-sans-serif, system-ui, sans-serif;
+  --font-hindi: "Mukta", sans-serif;
+  
+  --color-ngo-dark: #0f4d24;
+  --color-ngo-forest: #1f6b35;
+  --color-ngo-cream: #f5f1e8;
+  --color-ngo-beige: #efe7d6;
+  
+  --color-ngo-dark-hover: #082b14;
+  --color-ngo-forest-hover: #154b25;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f5f1e8;
+  color: #1a2a1a;
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar to match NGO theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #efe7d6;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f6b35;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0f4d24;
+}
+
+/* Style for leaflet horizontal dividers */
+.leaf-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #1f6b35;
+  font-size: 1.25rem;
+}
+
+.leaf-divider::before,
+.leaf-divider::after {
+  content: "";
+  height: 1px;
+  width: 100px;
+  background: linear-gradient(to right, transparent, #1f6b35, transparent);
+  flex-grow: 1;
+}
+
